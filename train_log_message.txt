@@ -1,0 +1,407 @@
+14.2s	1	Requirement already satisfied: datasets in /opt/conda/lib/python3.10/site-packages (3.1.0)
+14.2s	2	Requirement already satisfied: transformers in /opt/conda/lib/python3.10/site-packages (4.46.3)
+14.3s	3	Requirement already satisfied: filelock in /opt/conda/lib/python3.10/site-packages (from datasets) (3.15.1)
+14.3s	4	Requirement already satisfied: numpy>=1.17 in /opt/conda/lib/python3.10/site-packages (from datasets) (1.26.4)
+14.3s	5	Requirement already satisfied: pyarrow>=15.0.0 in /opt/conda/lib/python3.10/site-packages (from datasets) (17.0.0)
+14.3s	6	Requirement already satisfied: dill<0.3.9,>=0.3.0 in /opt/conda/lib/python3.10/site-packages (from datasets) (0.3.8)
+14.3s	7	Requirement already satisfied: pandas in /opt/conda/lib/python3.10/site-packages (from datasets) (2.2.3)
+14.3s	8	Requirement already satisfied: requests>=2.32.2 in /opt/conda/lib/python3.10/site-packages (from datasets) (2.32.3)
+14.3s	9	Requirement already satisfied: tqdm>=4.66.3 in /opt/conda/lib/python3.10/site-packages (from datasets) (4.66.4)
+14.3s	10	Requirement already satisfied: xxhash in /opt/conda/lib/python3.10/site-packages (from datasets) (3.4.1)
+14.3s	11	Requirement already satisfied: multiprocess<0.70.17 in /opt/conda/lib/python3.10/site-packages (from datasets) (0.70.16)
+14.3s	12	Requirement already satisfied: fsspec<=2024.9.0,>=2023.1.0 in /opt/conda/lib/python3.10/site-packages (from fsspec[http]<=2024.9.0,>=2023.1.0->datasets) (2024.6.0)
+14.3s	13	Requirement already satisfied: aiohttp in /opt/conda/lib/python3.10/site-packages (from datasets) (3.9.5)
+14.3s	14	Requirement already satisfied: huggingface-hub>=0.23.0 in /opt/conda/lib/python3.10/site-packages (from datasets) (0.26.2)
+14.3s	15	Requirement already satisfied: packaging in /opt/conda/lib/python3.10/site-packages (from datasets) (21.3)
+14.3s	16	Requirement already satisfied: pyyaml>=5.1 in /opt/conda/lib/python3.10/site-packages (from datasets) (6.0.2)
+14.7s	17	Requirement already satisfied: regex!=2019.12.17 in /opt/conda/lib/python3.10/site-packages (from transformers) (2024.5.15)
+14.7s	18	Requirement already satisfied: tokenizers<0.21,>=0.20 in /opt/conda/lib/python3.10/site-packages (from transformers) (0.20.3)
+14.7s	19	Requirement already satisfied: safetensors>=0.4.1 in /opt/conda/lib/python3.10/site-packages (from transformers) (0.4.5)
+14.8s	20	Requirement already satisfied: aiosignal>=1.1.2 in /opt/conda/lib/python3.10/site-packages (from aiohttp->datasets) (1.3.1)
+14.8s	21	Requirement already satisfied: attrs>=17.3.0 in /opt/conda/lib/python3.10/site-packages (from aiohttp->datasets) (23.2.0)
+14.8s	22	Requirement already satisfied: frozenlist>=1.1.1 in /opt/conda/lib/python3.10/site-packages (from aiohttp->datasets) (1.4.1)
+14.8s	23	Requirement already satisfied: multidict<7.0,>=4.5 in /opt/conda/lib/python3.10/site-packages (from aiohttp->datasets) (6.0.5)
+14.8s	24	Requirement already satisfied: yarl<2.0,>=1.0 in /opt/conda/lib/python3.10/site-packages (from aiohttp->datasets) (1.9.4)
+14.8s	25	Requirement already satisfied: async-timeout<5.0,>=4.0 in /opt/conda/lib/python3.10/site-packages (from aiohttp->datasets) (4.0.3)
+14.9s	26	Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/conda/lib/python3.10/site-packages (from huggingface-hub>=0.23.0->datasets) (4.12.2)
+14.9s	27	Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /opt/conda/lib/python3.10/site-packages (from packaging->datasets) (3.1.2)
+14.9s	28	Requirement already satisfied: charset-normalizer<4,>=2 in /opt/conda/lib/python3.10/site-packages (from requests>=2.32.2->datasets) (3.3.2)
+14.9s	29	Requirement already satisfied: idna<4,>=2.5 in /opt/conda/lib/python3.10/site-packages (from requests>=2.32.2->datasets) (3.7)
+14.9s	30	Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/conda/lib/python3.10/site-packages (from requests>=2.32.2->datasets) (1.26.18)
+14.9s	31	Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.10/site-packages (from requests>=2.32.2->datasets) (2024.6.2)
+15.1s	32	Requirement already satisfied: python-dateutil>=2.8.2 in /opt/conda/lib/python3.10/site-packages (from pandas->datasets) (2.9.0.post0)
+15.1s	33	Requirement already satisfied: pytz>=2020.1 in /opt/conda/lib/python3.10/site-packages (from pandas->datasets) (2024.1)
+15.1s	34	Requirement already satisfied: tzdata>=2022.7 in /opt/conda/lib/python3.10/site-packages (from pandas->datasets) (2024.1)
+15.1s	35	Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas->datasets) (1.16.0)
+39.3s	36	OpenAIGPTConfig {
+39.3s	37	  "_attn_implementation_autoset": true,
+39.3s	38	  "afn": "gelu",
+39.3s	39	  "attn_pdrop": 0.1,
+39.3s	40	  "embd_pdrop": 0.1,
+39.3s	41	  "initializer_range": 0.02,
+39.3s	42	  "layer_norm_epsilon": 1e-05,
+39.3s	43	  "model_type": "openai-gpt",
+39.3s	44	  "n_embd": 768,
+39.3s	45	  "n_head": 12,
+39.3s	46	  "n_layer": 12,
+39.3s	47	  "n_positions": 512,
+39.3s	48	  "resid_pdrop": 0.1,
+39.3s	49	  "summary_activation": null,
+39.3s	50	  "summary_first_dropout": 0.1,
+39.3s	51	  "summary_proj_to_labels": true,
+39.3s	52	  "summary_type": "cls_index",
+39.3s	53	  "summary_use_proj": true,
+39.3s	54	  "transformers_version": "4.46.3",
+39.3s	55	  "vocab_size": 40478
+39.3s	56	}
+39.3s	57	
+45.6s	58	58895
+63.0s	59	Token indices sequence length is longer than the specified maximum sequence length for this model (3103016 > 1024). Running this sequence through the model will result in indexing errors
+63.2s	60	tensor([50258, 24361,    25, 13786,  1115,  9040,   329, 10589,  5448,    13,
+63.2s	61	          198, 33706,    25,   352,    13, 47659,   257, 12974,  5496,   290,
+63.2s	62	          787,  1654,   284,  2291,  6088,   286, 15921,   290, 13701,    13,
+63.2s	63	          362,    13, 32900,  7987,   284,  1394,   534,  1767,  4075,   290,
+63.2s	64	         1913,    13,   513,    13,  3497,  1576,  3993,   290,  5529,   257,
+63.2s	65	         6414,  3993,  7269,    13, 50256,   628, 50258, 24361,    25,  1867])
+64.8s	66	/tmp/ipykernel_23/3486634476.py:3: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+64.8s	67	  model.load_state_dict(torch.load("/kaggle/working/gpt_model.pth"))
+64.9s	68	Using 2 GPUs
+66.1s	69	/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/parallel_apply.py:79: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+66.1s	70	  with torch.cuda.device(device), torch.cuda.stream(stream), autocast(enabled=autocast_enabled):
+66.8s	71	/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+66.8s	72	  warnings.warn('Was asked to gather along dimension 0, but all '
+148.9s	73	Epoch 1/500: Loss = 6.6321107864379885
+238.6s	74	Epoch 2/500: Loss = 5.57148726940155
+328.9s	75	Epoch 3/500: Loss = 5.286918268203736
+419.8s	76	Epoch 4/500: Loss = 5.103151636123657
+511.0s	77	Epoch 5/500: Loss = 4.948308444023132
+602.2s	78	Epoch 6/500: Loss = 4.822182803153992
+693.4s	79	Epoch 7/500: Loss = 4.664349365234375
+784.7s	80	Epoch 8/500: Loss = 4.570442905426026
+876.1s	81	Epoch 9/500: Loss = 4.469911360740662
+967.4s	82	Epoch 10/500: Loss = 4.368242402076721
+1058.4s	83	Epoch 11/500: Loss = 4.299195909500122
+1149.2s	84	Epoch 12/500: Loss = 4.222888193130493
+1239.8s	85	Epoch 13/500: Loss = 4.1705546474456785
+1330.3s	86	Epoch 14/500: Loss = 4.090909821987152
+1420.6s	87	Epoch 15/500: Loss = 4.022344372272491
+1510.9s	88	Epoch 16/500: Loss = 3.9789994382858276
+1601.2s	89	Epoch 17/500: Loss = 3.9314778065681457
+1691.5s	90	Epoch 18/500: Loss = 3.887366099357605
+1781.7s	91	Epoch 19/500: Loss = 3.837925810813904
+1872.1s	92	Epoch 20/500: Loss = 3.799940106868744
+1962.5s	93	Epoch 21/500: Loss = 3.7406203389167785
+2052.9s	94	Epoch 22/500: Loss = 3.702926995754242
+2143.3s	95	Epoch 23/500: Loss = 3.679011344909668
+2233.7s	96	Epoch 24/500: Loss = 3.6319331169128417
+2324.0s	97	Epoch 25/500: Loss = 3.598352024555206
+2414.4s	98	Epoch 26/500: Loss = 3.5664211392402647
+2504.7s	99	Epoch 27/500: Loss = 3.528027126789093
+2594.9s	100	Epoch 28/500: Loss = 3.4944524478912355
+2685.1s	101	Epoch 29/500: Loss = 3.4671033811569214
+2775.3s	102	Epoch 30/500: Loss = 3.4434228110313416
+2865.7s	103	Epoch 31/500: Loss = 3.4094771218299864
+2955.9s	104	Epoch 32/500: Loss = 3.3945455288887025
+3046.4s	105	Epoch 33/500: Loss = 3.360625808238983
+3136.7s	106	Epoch 34/500: Loss = 3.3341871881484986
+3227.0s	107	Epoch 35/500: Loss = 3.319714195728302
+3317.3s	108	Epoch 36/500: Loss = 3.2801678156852723
+3407.7s	109	Epoch 37/500: Loss = 3.2600003600120546
+3498.1s	110	Epoch 38/500: Loss = 3.2263749480247497
+3588.3s	111	Epoch 39/500: Loss = 3.211746187210083
+3678.6s	112	Epoch 40/500: Loss = 3.205595235824585
+3769.2s	113	Epoch 41/500: Loss = 3.1688012051582337
+3860.2s	114	Epoch 42/500: Loss = 3.1456694912910463
+3951.4s	115	Epoch 43/500: Loss = 3.1409512758255005
+4042.6s	116	Epoch 44/500: Loss = 3.1300621700286864
+4133.8s	117	Epoch 45/500: Loss = 3.1068578815460204
+4225.1s	118	Epoch 46/500: Loss = 3.072530767917633
+4316.4s	119	Epoch 47/500: Loss = 3.057987558841705
+4407.8s	120	Epoch 48/500: Loss = 3.0389396381378173
+4499.0s	121	Epoch 49/500: Loss = 3.0289583802223206
+4590.2s	122	Epoch 50/500: Loss = 3.0049199223518372
+4681.4s	123	Epoch 51/500: Loss = 2.997901065349579
+4772.1s	124	Epoch 52/500: Loss = 2.974097504615784
+4862.7s	125	Epoch 53/500: Loss = 2.963984670639038
+4953.0s	126	Epoch 54/500: Loss = 2.947729308605194
+5043.3s	127	Epoch 55/500: Loss = 2.9363134503364563
+5133.5s	128	Epoch 56/500: Loss = 2.9161087584495546
+5223.7s	129	Epoch 57/500: Loss = 2.9032673907279967
+5314.0s	130	Epoch 58/500: Loss = 2.8933025193214417
+5404.3s	131	Epoch 59/500: Loss = 2.890796213150024
+5494.5s	132	Epoch 60/500: Loss = 2.8640327429771424
+5584.7s	133	Epoch 61/500: Loss = 2.85696884393692
+5675.0s	134	Epoch 62/500: Loss = 2.823654365539551
+5765.3s	135	Epoch 63/500: Loss = 2.8334371280670165
+5855.4s	136	Epoch 64/500: Loss = 2.812306821346283
+5945.5s	137	Epoch 65/500: Loss = 2.806565589904785
+6035.6s	138	Epoch 66/500: Loss = 2.78184059381485
+6125.8s	139	Epoch 67/500: Loss = 2.7846615505218506
+6216.1s	140	Epoch 68/500: Loss = 2.7628473114967345
+6306.2s	141	Epoch 69/500: Loss = 2.759425387382507
+6396.4s	142	Epoch 70/500: Loss = 2.7522826766967774
+6486.7s	143	Epoch 71/500: Loss = 2.73922678232193
+6576.9s	144	Epoch 72/500: Loss = 2.7147653484344483
+6667.1s	145	Epoch 73/500: Loss = 2.7054305148124693
+6757.3s	146	Epoch 74/500: Loss = 2.69166784286499
+6847.6s	147	Epoch 75/500: Loss = 2.679425902366638
+6937.9s	148	Epoch 76/500: Loss = 2.6801181030273438
+7028.0s	149	Epoch 77/500: Loss = 2.670254936218262
+7118.2s	150	Epoch 78/500: Loss = 2.6695631885528566
+7208.4s	151	Epoch 79/500: Loss = 2.6360095930099487
+7298.5s	152	Epoch 80/500: Loss = 2.649463391304016
+7388.9s	153	Epoch 81/500: Loss = 2.622240135669708
+7479.9s	154	Epoch 82/500: Loss = 2.623430166244507
+7571.0s	155	Epoch 83/500: Loss = 2.6230535888671875
+7662.0s	156	Epoch 84/500: Loss = 2.5956580734252928
+7753.1s	157	Epoch 85/500: Loss = 2.603797645568848
+7844.2s	158	Epoch 86/500: Loss = 2.588698425292969
+7935.3s	159	Epoch 87/500: Loss = 2.577553427219391
+8026.5s	160	Epoch 88/500: Loss = 2.5630856204032897
+8117.5s	161	Epoch 89/500: Loss = 2.55880419254303
+8208.8s	162	Epoch 90/500: Loss = 2.555494477748871
+8299.4s	163	Epoch 91/500: Loss = 2.538102242946625
+8389.9s	164	Epoch 92/500: Loss = 2.5449953746795653
+8480.1s	165	Epoch 93/500: Loss = 2.518494658470154
+8570.4s	166	Epoch 94/500: Loss = 2.5206968450546263
+8660.5s	167	Epoch 95/500: Loss = 2.518149778842926
+8750.7s	168	Epoch 96/500: Loss = 2.509576985836029
+8840.8s	169	Epoch 97/500: Loss = 2.500153696537018
+8930.9s	170	Epoch 98/500: Loss = 2.480168595314026
+9020.8s	171	Epoch 99/500: Loss = 2.4884330105781554
+9110.9s	172	Epoch 100/500: Loss = 2.475502333641052
+9201.0s	173	Epoch 101/500: Loss = 2.467446084022522
+9291.0s	174	Epoch 102/500: Loss = 2.462070107460022
+9381.1s	175	Epoch 103/500: Loss = 2.4590249252319336
+9471.1s	176	Epoch 104/500: Loss = 2.446227533817291
+9561.2s	177	Epoch 105/500: Loss = 2.4534432077407837
+9651.3s	178	Epoch 106/500: Loss = 2.4366115736961365
+9741.6s	179	Epoch 107/500: Loss = 2.430006358623505
+9831.8s	180	Epoch 108/500: Loss = 2.4261238884925844
+9922.0s	181	Epoch 109/500: Loss = 2.4166185331344603
+10012.1s	182	Epoch 110/500: Loss = 2.4186996150016786
+10102.4s	183	Epoch 111/500: Loss = 2.4074900698661805
+10192.5s	184	Epoch 112/500: Loss = 2.401897995471954
+10282.6s	185	Epoch 113/500: Loss = 2.3941887521743777
+10372.7s	186	Epoch 114/500: Loss = 2.3902520418167112
+10463.0s	187	Epoch 115/500: Loss = 2.371199607849121
+10553.1s	188	Epoch 116/500: Loss = 2.368271849155426
+10643.1s	189	Epoch 117/500: Loss = 2.368540172576904
+10733.2s	190	Epoch 118/500: Loss = 2.3593939304351808
+10823.4s	191	Epoch 119/500: Loss = 2.3440603590011597
+10913.7s	192	Epoch 120/500: Loss = 2.3549176979064943
+11004.0s	193	Epoch 121/500: Loss = 2.3410985898971557
+11094.8s	194	Epoch 122/500: Loss = 2.34708829164505
+11185.8s	195	Epoch 123/500: Loss = 2.3413996577262877
+11276.8s	196	Epoch 124/500: Loss = 2.3359689021110537
+11367.8s	197	Epoch 125/500: Loss = 2.320500524044037
+11459.0s	198	Epoch 126/500: Loss = 2.3146675848960876
+11550.0s	199	Epoch 127/500: Loss = 2.3209822511672975
+11641.3s	200	Epoch 128/500: Loss = 2.3027083539962767
+11732.5s	201	Epoch 129/500: Loss = 2.308647544384003
+11823.9s	202	Epoch 130/500: Loss = 2.284422044754028
+11914.7s	203	Epoch 131/500: Loss = 2.295259039402008
+12005.5s	204	Epoch 132/500: Loss = 2.289532582759857
+12096.1s	205	Epoch 133/500: Loss = 2.2747838830947877
+12186.4s	206	Epoch 134/500: Loss = 2.279920120239258
+12276.9s	207	Epoch 135/500: Loss = 2.266374423503876
+12367.3s	208	Epoch 136/500: Loss = 2.2794389438629152
+12457.5s	209	Epoch 137/500: Loss = 2.260299026966095
+12547.6s	210	Epoch 138/500: Loss = 2.2569329524040223
+12637.7s	211	Epoch 139/500: Loss = 2.249902901649475
+12728.0s	212	Epoch 140/500: Loss = 2.244098229408264
+12818.1s	213	Epoch 141/500: Loss = 2.2488505601882935
+12908.2s	214	Epoch 142/500: Loss = 2.2367884612083433
+12998.4s	215	Epoch 143/500: Loss = 2.2348709225654604
+13088.6s	216	Epoch 144/500: Loss = 2.233220751285553
+13178.7s	217	Epoch 145/500: Loss = 2.225835087299347
+13268.9s	218	Epoch 146/500: Loss = 2.223966131210327
+13359.0s	219	Epoch 147/500: Loss = 2.211065709590912
+13449.2s	220	Epoch 148/500: Loss = 2.2086097621917724
+13539.3s	221	Epoch 149/500: Loss = 2.2021985411643983
+13629.5s	222	Epoch 150/500: Loss = 2.203477056026459
+13719.5s	223	Epoch 151/500: Loss = 2.1939630842208864
+13809.6s	224	Epoch 152/500: Loss = 2.198298330307007
+13899.8s	225	Epoch 153/500: Loss = 2.1900920391082765
+13989.8s	226	Epoch 154/500: Loss = 2.186635911464691
+14080.1s	227	Epoch 155/500: Loss = 2.1846184659004213
+14170.1s	228	Epoch 156/500: Loss = 2.187126350402832
+14260.2s	229	Epoch 157/500: Loss = 2.1752252840995787
+14350.4s	230	Epoch 158/500: Loss = 2.165235342979431
+14440.5s	231	Epoch 159/500: Loss = 2.1591837334632875
+14530.7s	232	Epoch 160/500: Loss = 2.1594234323501587
+14621.2s	233	Epoch 161/500: Loss = 2.1589975643157957
+14711.9s	234	Epoch 162/500: Loss = 2.1489810061454775
+14802.9s	235	Epoch 163/500: Loss = 2.1427705264091492
+14894.1s	236	Epoch 164/500: Loss = 2.150828173160553
+14985.2s	237	Epoch 165/500: Loss = 2.142265843153
+15076.3s	238	Epoch 166/500: Loss = 2.1353019642829896
+15167.3s	239	Epoch 167/500: Loss = 2.1323092103004457
+15258.4s	240	Epoch 168/500: Loss = 2.1350895810127257
+15349.5s	241	Epoch 169/500: Loss = 2.122737329006195
+15440.4s	242	Epoch 170/500: Loss = 2.128947824239731
+15531.0s	243	Epoch 171/500: Loss = 2.1186004137992858
+15621.3s	244	Epoch 172/500: Loss = 2.1133637642860412
+15711.6s	245	Epoch 173/500: Loss = 2.120007109642029
+15801.8s	246	Epoch 174/500: Loss = 2.106634430885315
+15891.8s	247	Epoch 175/500: Loss = 2.102511874437332
+15981.8s	248	Epoch 176/500: Loss = 2.0994665026664734
+16071.9s	249	Epoch 177/500: Loss = 2.096475450992584
+16162.0s	250	Epoch 178/500: Loss = 2.0924282228946685
+16252.2s	251	Epoch 179/500: Loss = 2.0901866710186003
+16342.4s	252	Epoch 180/500: Loss = 2.0871508884429932
+16432.5s	253	Epoch 181/500: Loss = 2.080181118249893
+16522.7s	254	Epoch 182/500: Loss = 2.07555815577507
+16612.6s	255	Epoch 183/500: Loss = 2.0826410818099976
+16702.6s	256	Epoch 184/500: Loss = 2.0740941631793977
+16792.8s	257	Epoch 185/500: Loss = 2.071346563100815
+16882.8s	258	Epoch 186/500: Loss = 2.0662177324295046
+16972.9s	259	Epoch 187/500: Loss = 2.0672094011306763
+17062.9s	260	Epoch 188/500: Loss = 2.0597198951244353
+17153.0s	261	Epoch 189/500: Loss = 2.062743430137634
+17243.2s	262	Epoch 190/500: Loss = 2.0547616946697236
+17333.4s	263	Epoch 191/500: Loss = 2.0582117652893066
+17423.4s	264	Epoch 192/500: Loss = 2.05609356880188
+17513.5s	265	Epoch 193/500: Loss = 2.0455187690258025
+17603.6s	266	Epoch 194/500: Loss = 2.036674053668976
+17693.6s	267	Epoch 195/500: Loss = 2.037277193069458
+17783.7s	268	Epoch 196/500: Loss = 2.038318668603897
+17873.7s	269	Epoch 197/500: Loss = 2.043813328742981
+17963.7s	270	Epoch 198/500: Loss = 2.0269328010082246
+18053.7s	271	Epoch 199/500: Loss = 2.0264829802513122
+18143.8s	272	Epoch 200/500: Loss = 2.0189230930805206
+18234.2s	273	Epoch 201/500: Loss = 2.012174161672592
+18324.8s	274	Epoch 202/500: Loss = 2.013297117948532
+18415.9s	275	Epoch 203/500: Loss = 2.0076935684680937
+18506.8s	276	Epoch 204/500: Loss = 2.002116791009903
+18597.8s	277	Epoch 205/500: Loss = 2.003098694086075
+18688.8s	278	Epoch 206/500: Loss = 2.0079363334178923
+18779.8s	279	Epoch 207/500: Loss = 2.0016514253616333
+18870.9s	280	Epoch 208/500: Loss = 1.9915718138217926
+18962.0s	281	Epoch 209/500: Loss = 1.986509200334549
+19053.0s	282	Epoch 210/500: Loss = 1.997107880115509
+19143.6s	283	Epoch 211/500: Loss = 1.9911628580093383
+19234.0s	284	Epoch 212/500: Loss = 1.9858259642124176
+19324.3s	285	Epoch 213/500: Loss = 1.983113603591919
+19414.5s	286	Epoch 214/500: Loss = 1.9904930293560028
+19504.8s	287	Epoch 215/500: Loss = 1.9733212971687317
+19595.1s	288	Epoch 216/500: Loss = 1.9778925132751466
+19685.3s	289	Epoch 217/500: Loss = 1.9730115723609924
+19775.5s	290	Epoch 218/500: Loss = 1.9698052549362182
+19865.6s	291	Epoch 219/500: Loss = 1.9651722943782806
+19955.7s	292	Epoch 220/500: Loss = 1.9667788136005402
+20045.8s	293	Epoch 221/500: Loss = 1.9774572658538818
+20136.1s	294	Epoch 222/500: Loss = 1.9598147034645081
+20226.4s	295	Epoch 223/500: Loss = 1.9628765666484833
+20316.6s	296	Epoch 224/500: Loss = 1.9635217607021331
+20406.8s	297	Epoch 225/500: Loss = 1.9421314358711244
+20497.2s	298	Epoch 226/500: Loss = 1.948389185667038
+20587.5s	299	Epoch 227/500: Loss = 1.9499262487888336
+20677.8s	300	Epoch 228/500: Loss = 1.9446995878219604
+20767.8s	301	Epoch 229/500: Loss = 1.945755761861801
+20857.9s	302	Epoch 230/500: Loss = 1.9399589776992798
+20948.0s	303	Epoch 231/500: Loss = 1.9421578884124755
+21038.1s	304	Epoch 232/500: Loss = 1.9342920982837677
+21128.3s	305	Epoch 233/500: Loss = 1.9258153903484345
+21218.5s	306	Epoch 234/500: Loss = 1.9292824244499207
+21308.7s	307	Epoch 235/500: Loss = 1.9272882974147796
+21398.9s	308	Epoch 236/500: Loss = 1.9160575556755066
+21489.0s	309	Epoch 237/500: Loss = 1.9228981399536134
+21579.2s	310	Epoch 238/500: Loss = 1.9137080121040344
+21669.5s	311	Epoch 239/500: Loss = 1.9102347362041474
+21759.7s	312	Epoch 240/500: Loss = 1.9142133235931396
+21850.3s	313	Epoch 241/500: Loss = 1.9155558836460114
+21941.1s	314	Epoch 242/500: Loss = 1.9132512044906616
+22032.1s	315	Epoch 243/500: Loss = 1.9050813114643097
+22123.2s	316	Epoch 244/500: Loss = 1.9119436144828796
+22214.4s	317	Epoch 245/500: Loss = 1.9107639110088348
+22305.2s	318	Epoch 246/500: Loss = 1.9021111977100373
+22396.3s	319	Epoch 247/500: Loss = 1.9029900276660918
+22487.4s	320	Epoch 248/500: Loss = 1.8898930668830871
+22578.7s	321	Epoch 249/500: Loss = 1.8994978845119477
+22669.7s	322	Epoch 250/500: Loss = 1.8872174000740052
+22760.3s	323	Epoch 251/500: Loss = 1.889278964996338
+22850.8s	324	Epoch 252/500: Loss = 1.888507571220398
+22941.1s	325	Epoch 253/500: Loss = 1.889263505935669
+23031.3s	326	Epoch 254/500: Loss = 1.883413144350052
+23121.4s	327	Epoch 255/500: Loss = 1.874643896818161
+23211.4s	328	Epoch 256/500: Loss = 1.8801319468021394
+23301.6s	329	Epoch 257/500: Loss = 1.8767804098129273
+23391.7s	330	Epoch 258/500: Loss = 1.8711201167106628
+23481.8s	331	Epoch 259/500: Loss = 1.8688134372234344
+23571.9s	332	Epoch 260/500: Loss = 1.8639262449741363
+23662.1s	333	Epoch 261/500: Loss = 1.870142480134964
+23752.2s	334	Epoch 262/500: Loss = 1.8601222491264344
+23842.2s	335	Epoch 263/500: Loss = 1.8622848498821258
+23932.2s	336	Epoch 264/500: Loss = 1.8597840511798858
+24022.3s	337	Epoch 265/500: Loss = 1.8605214643478394
+24112.4s	338	Epoch 266/500: Loss = 1.8545588076114654
+24202.6s	339	Epoch 267/500: Loss = 1.8586356782913207
+24292.7s	340	Epoch 268/500: Loss = 1.8536667120456696
+24382.9s	341	Epoch 269/500: Loss = 1.842279920578003
+24473.1s	342	Epoch 270/500: Loss = 1.8483211779594422
+24563.2s	343	Epoch 271/500: Loss = 1.846320517063141
+24653.3s	344	Epoch 272/500: Loss = 1.8416084671020507
+24743.3s	345	Epoch 273/500: Loss = 1.8485341918468476
+24833.4s	346	Epoch 274/500: Loss = 1.8478762328624725
+24923.5s	347	Epoch 275/500: Loss = 1.8388186228275298
+25013.8s	348	Epoch 276/500: Loss = 1.8361421859264373
+25103.9s	349	Epoch 277/500: Loss = 1.8381379044055939
+25194.2s	350	Epoch 278/500: Loss = 1.8293601977825165
+25284.3s	351	Epoch 279/500: Loss = 1.8331052720546723
+25374.5s	352	Epoch 280/500: Loss = 1.8229010343551635
+25465.1s	353	Epoch 281/500: Loss = 1.8259743893146514
+25556.1s	354	Epoch 282/500: Loss = 1.8258499813079834
+25647.1s	355	Epoch 283/500: Loss = 1.8173147237300873
+25738.3s	356	Epoch 284/500: Loss = 1.8175202059745788
+25829.4s	357	Epoch 285/500: Loss = 1.81798881649971
+25920.4s	358	Epoch 286/500: Loss = 1.8187046694755553
+26011.5s	359	Epoch 287/500: Loss = 1.8053789973258971
+26102.6s	360	Epoch 288/500: Loss = 1.8048562812805176
+26193.8s	361	Epoch 289/500: Loss = 1.8125783860683442
+26284.6s	362	Epoch 290/500: Loss = 1.8085975217819215
+26375.1s	363	Epoch 291/500: Loss = 1.80294535279274
+26465.4s	364	Epoch 292/500: Loss = 1.8081173491477966
+26555.5s	365	Epoch 293/500: Loss = 1.7931817328929902
+26645.6s	366	Epoch 294/500: Loss = 1.8038745141029358
+26735.6s	367	Epoch 295/500: Loss = 1.8042320442199706
+26825.7s	368	Epoch 296/500: Loss = 1.7954128348827363
+26915.8s	369	Epoch 297/500: Loss = 1.795565574169159
+27005.8s	370	Epoch 298/500: Loss = 1.794376550912857
+27095.9s	371	Epoch 299/500: Loss = 1.7981414496898651
+27186.0s	372	Epoch 300/500: Loss = 1.7942206013202666
+27276.2s	373	Epoch 301/500: Loss = 1.7855065310001372
+27366.4s	374	Epoch 302/500: Loss = 1.7799679148197174
+27456.5s	375	Epoch 303/500: Loss = 1.773688142299652
+27546.6s	376	Epoch 304/500: Loss = 1.7832627499103546
+27636.8s	377	Epoch 305/500: Loss = 1.7796553444862366
+27726.9s	378	Epoch 306/500: Loss = 1.774030672311783
+27817.0s	379	Epoch 307/500: Loss = 1.7765794909000396
+27907.0s	380	Epoch 308/500: Loss = 1.7674549233913421
+27997.1s	381	Epoch 309/500: Loss = 1.7774562072753906
+28087.2s	382	Epoch 310/500: Loss = 1.7658302867412567
+28177.3s	383	Epoch 311/500: Loss = 1.7721967899799347
+28267.3s	384	Epoch 312/500: Loss = 1.7625202083587646
+28357.3s	385	Epoch 313/500: Loss = 1.765883264541626
+28447.5s	386	Epoch 314/500: Loss = 1.7639386522769929
+28537.7s	387	Epoch 315/500: Loss = 1.7605113577842713
+28627.9s	388	Epoch 316/500: Loss = 1.7651335847377778
+28718.1s	389	Epoch 317/500: Loss = 1.755165696144104
+28808.1s	390	Epoch 318/500: Loss = 1.7630033433437347
+28898.2s	391	Epoch 319/500: Loss = 1.7566444885730743
+28988.3s	392	Epoch 320/500: Loss = 1.7540440881252288
+29078.7s	393	Epoch 321/500: Loss = 1.7533197128772735
+29169.4s	394	Epoch 322/500: Loss = 1.7522478628158569
+29260.4s	395	Epoch 323/500: Loss = 1.7568073046207429
+29351.4s	396	Epoch 324/500: Loss = 1.7489949429035188
+29442.4s	397	Epoch 325/500: Loss = 1.742178329229355
+29533.4s	398	Epoch 326/500: Loss = 1.7470339846611023
+29624.4s	399	Epoch 327/500: Loss = 1.7475170111656189
+29715.4s	400	Epoch 328/500: Loss = 1.7421274232864379
+29806.3s	401	Epoch 329/500: Loss = 1.7495178556442261
+29897.0s	402	Epoch 330/500: Loss = 1.7335068047046662
+29987.3s	403	Epoch 331/500: Loss = 1.740251430273056
+30077.5s	404	Epoch 332/500: Loss = 1.734265319108963
+30167.6s	405	Epoch 333/500: Loss = 1.7295863282680513
+30257.6s	406	Epoch 334/500: Loss = 1.7344921827316284
+30347.7s	407	Epoch 335/500: Loss = 1.7262697625160217
